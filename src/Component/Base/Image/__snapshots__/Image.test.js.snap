@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with extra props passed like height, width 1`] = `
+<div>
+  <img
+    alt="image"
+    data-testid="image.jpg"
+    height="20px"
+    src="https://raw.githubusercontent.com/pankajladhar/Reactgram/master/app/images/image.jpg"
+    width="20px"
+  />
+</div>
+`;
+
+exports[`renders with required props 1`] = `
+<div>
+  <img
+    alt="image"
+    data-testid="image.jpg"
+    src="https://raw.githubusercontent.com/pankajladhar/Reactgram/master/app/images/image.jpg"
+  />
+</div>
+`;

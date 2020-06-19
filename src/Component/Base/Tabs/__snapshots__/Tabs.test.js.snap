@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs renders Tabs properly 1`] = `
+<div>
+  <div
+    class="tabs"
+  >
+    <div
+      class="tab"
+    >
+      Like 1
+      <style>
+        
+	.tab {
+		background: #dedede;
+		padding: 5px 10px;
+		color: #333333;
+	}
+
+      </style>
+    </div>
+    <div
+      class="tab"
+    >
+      Comment 1
+      <style>
+        
+	.tab {
+		background: #dedede;
+		padding: 5px 10px;
+		color: #333333;
+	}
+
+      </style>
+    </div>
+    <style>
+      
+    .tabs {
+			display: flex;
+			justify-content: space-between;
+		}
+
+    </style>
+  </div>
+</div>
+`;
+
+exports[`Tabs renders not render unwanted child 1`] = `
+<div>
+  <div
+    class="tabs"
+  >
+    <div
+      class="tab"
+    >
+      Like 1
+      <style>
+        
+	.tab {
+		background: #dedede;
+		padding: 5px 10px;
+		color: #333333;
+	}
+
+      </style>
+    </div>
+    <style>
+      
+    .tabs {
+			display: flex;
+			justify-content: space-between;
+		}
+
+    </style>
+  </div>
+</div>
+`;

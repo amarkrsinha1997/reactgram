@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <div
+    class="tab"
+  >
+    <style>
+      
+	.tab {
+		background: #dedede;
+		padding: 5px 10px;
+		color: #333333;
+	}
+
+    </style>
+  </div>
+</div>
+`;
