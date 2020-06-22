@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import App from './App';
 
 jest.mock('./data/posts', () => {
@@ -18,8 +18,21 @@ jest.mock('./data/posts', () => {
 		]
 	}]
 })
-
-test('renders learn react link', () => {
-  const { container } = render(<App />);
-  expect(container).toMatchSnapshot();
+describe('App', () => {
+	test('renders learn react link', () => {
+		const { container } = render(<App />);
+		expect(container).toMatchSnapshot();
+	});
+	test('should be able to see comment on the post when clicked on comment tab', () => {
+		const { queryByTestId, queryByText } = render(<App />);
+		const commentElements = queryByTestId(/_A2r0aQcfD/)
+		expect(commentElements).toBeNull()
+	
+		const commentTabElement = queryByText(/Comments/)
+		fireEvent.click(commentTabElement)
+	
+		expect(queryByTestId(/_A2r0aQcfD/)).toBeInTheDocument()
+	})
+	test.todo('should be able to like the post')
+	test.todo('should be able to comment on the post')
 });
