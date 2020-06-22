@@ -6,41 +6,43 @@ exports[`Tabs renders Tabs properly 1`] = `
     class="tabs"
   >
     <div
-      class="tab"
+      class="seperator"
     >
-      Like 1
-      <style>
-        
-	.tab {
-		background: #dedede;
-		padding: 5px 10px;
-		color: #333333;
-	}
+      <div
+        class="tab"
+      >
+        Like 1
+        <style>
+          
+.tab {
+	background: #dedede;
+	padding: 10px 20px;
+	color: #333333;
+	text-align: center;
+}
 
-      </style>
+        </style>
+      </div>
     </div>
     <div
-      class="tab"
+      class="seperator"
     >
-      Comment 1
-      <style>
-        
-	.tab {
-		background: #dedede;
-		padding: 5px 10px;
-		color: #333333;
-	}
+      <div
+        class="tab"
+      >
+        Comment 1
+        <style>
+          
+.tab {
+	background: #dedede;
+	padding: 10px 20px;
+	color: #333333;
+	text-align: center;
+}
 
-      </style>
+        </style>
+      </div>
     </div>
-    <style>
-      
-    .tabs {
-			display: flex;
-			justify-content: space-between;
-		}
-
-    </style>
   </div>
 </div>
 `;
@@ -51,27 +53,24 @@ exports[`Tabs renders not render unwanted child 1`] = `
     class="tabs"
   >
     <div
-      class="tab"
+      class="seperator"
     >
-      Like 1
-      <style>
-        
-	.tab {
-		background: #dedede;
-		padding: 5px 10px;
-		color: #333333;
-	}
+      <div
+        class="tab"
+      >
+        Like 1
+        <style>
+          
+.tab {
+	background: #dedede;
+	padding: 10px 20px;
+	color: #333333;
+	text-align: center;
+}
 
-      </style>
+        </style>
+      </div>
     </div>
-    <style>
-      
-    .tabs {
-			display: flex;
-			justify-content: space-between;
-		}
-
-    </style>
   </div>
 </div>
 `;

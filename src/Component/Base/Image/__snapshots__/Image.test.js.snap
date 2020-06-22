@@ -4,6 +4,7 @@ exports[`renders with extra props passed like height, width 1`] = `
 <div>
   <img
     alt="image"
+    class="image"
     data-testid="image.jpg"
     height="20px"
     src="https://raw.githubusercontent.com/pankajladhar/Reactgram/master/app/images/image.jpg"
@@ -16,6 +17,7 @@ exports[`renders with required props 1`] = `
 <div>
   <img
     alt="image"
+    class="image"
     data-testid="image.jpg"
     src="https://raw.githubusercontent.com/pankajladhar/Reactgram/master/app/images/image.jpg"
   />

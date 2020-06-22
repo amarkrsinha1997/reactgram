@@ -2,11 +2,12 @@ import React from 'react';
 import { colors } from '../../../styles/colors';
 
 const style =  `
-	.tab {
-		background: ${colors.grey.shade1};
-		padding: 5px 10px;
-		color: ${colors.black.shade1};
-	}
+.tab {
+	background: ${colors.grey.shade1};
+	padding: 10px 20px;
+	color: ${colors.black.shade1};
+	text-align: center;
+}
 `
 const Tab = (props) => {
 	return (

@@ -1,0 +1,12 @@
+.tabs {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+.seperator {
+	border-right: 1px solid #999;
+	flex: 1;
+	&:last-child {
+		border-right: none;
+	}
+}

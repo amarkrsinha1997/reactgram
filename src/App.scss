@@ -1,0 +1,41 @@
+@mixin lowMobile { 
+	@media (min-width: 0px) and (max-width:319px) { @content } 
+};
+@mixin mobile { 
+	@media (min-width: 320px) and (max-width:719px) { @content } 
+};
+@mixin mobileToPhablet { 
+	@media (min-width: 320px) and (max-width: 1023px) { @content } 
+};
+@mixin mobileToTablet { 
+	@media  (min-width: 320px) and (max-width: 1279px) { @content } 
+};
+@mixin mobileToDesktop { 
+	@media  (min-width: 320px) { @content } 
+};
+@mixin phablet { 
+	@media  (min-width: 720px) and (max-width: 1023px) { @content } 
+};
+@mixin phabletToTablet { 
+	@media  (min-width: 720px) and (max-width: 1279px) { @content } 
+};
+@mixin phabletToDesktop { 
+	@media  (min-width: 720px) { @content } 
+};
+@mixin tabletOnly { 
+	@media  (min-width: 1024px) and (max-width: 1279px) { @content } 
+};
+@mixin tabletToDesktop { 
+	@media  (min-width: 1024px) { @content } 
+};
+@mixin desktop { 
+	@media  (min-width: 1280px) { @content } 
+}
+
+.App {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+}

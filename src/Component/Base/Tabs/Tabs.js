@@ -1,12 +1,6 @@
 import React, { useMemo } from 'react'
 import { Tab } from './Tab';
-
-const style = `
-    .tabs {
-			display: flex;
-			justify-content: space-between;
-		}
-`;
+import './Tabs.scss'
 
 function Tabs(props) {
 	const children = useMemo(() => {
@@ -14,7 +8,7 @@ function Tabs(props) {
 		React.Children.forEach(props.children, child => {
 			const type = child && child.type && (child.type.displayName || child.type.name);
 			if ((Tab.displayName || Tab.name).includes(type)) {
-				result.push(child)
+        result.push(<div className="seperator">{child}</div>)
 			}
 		})
 		return result
@@ -22,13 +16,10 @@ function Tabs(props) {
 
 	return (
 		<div className="tabs">
-			{
-				children
-			}
-			<style>{style}</style>
+			{children}
 		</div>
 	)
 }
-
+Tabs.Tab = Tab;
 export { Tabs }
 

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="post"
+    >
+      <div
+        class="post-image"
+      >
+        <img
+          alt="12276809_750065668431999_184252508_n.jpg"
+          class="image"
+          data-testid="12276809_750065668431999_184252508_n.jpg"
+          src="https://raw.githubusercontent.com/pankajladhar/Reactgram/master/app/images/12276809_750065668431999_184252508_n.jpg"
+        />
+      </div>
+      <div
+        class="tabs"
+      >
+        <div
+          class="seperator"
+        >
+          <div
+            class="tab"
+          >
+            Like
+            <style>
+              
+.tab {
+	background: #dedede;
+	padding: 10px 20px;
+	color: #333333;
+	text-align: center;
+}
+
+            </style>
+          </div>
+        </div>
+        <div
+          class="seperator"
+        >
+          <div
+            class="tab"
+          >
+            Comments
+            <style>
+              
+.tab {
+	background: #dedede;
+	padding: 10px 20px;
+	color: #333333;
+	text-align: center;
+}
+
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

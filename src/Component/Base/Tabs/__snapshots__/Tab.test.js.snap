@@ -7,11 +7,12 @@ exports[`renders learn react link 1`] = `
   >
     <style>
       
-	.tab {
-		background: #dedede;
-		padding: 5px 10px;
-		color: #333333;
-	}
+.tab {
+	background: #dedede;
+	padding: 10px 20px;
+	color: #333333;
+	text-align: center;
+}
 
     </style>
   </div>
