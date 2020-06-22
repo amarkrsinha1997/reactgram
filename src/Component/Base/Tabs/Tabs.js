@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Button } from './Button';
+import { Button } from '../Button/Button';
 import './Tabs.scss'
 
 function Tabs(props) {
