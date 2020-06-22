@@ -20,10 +20,10 @@ describe('Tabs', () => {
 		const wrapper = <Tabs>
 			<Tabs.Button>
 				Like 1
-            </Tabs.Button>
+      </Tabs.Button>
 			<div data-testid="unwanted">
 				Comment 1
-            </div>
+      </div>
 		</Tabs>
 		const { container } = render(wrapper);
 		const result = screen.queryByText(/comment 1/);

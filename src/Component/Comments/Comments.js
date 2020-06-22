@@ -6,7 +6,7 @@ const Comments = (props) => {
   return (
     <div className="comments" data-testid={props.code}>
       {props.comments.map((comment) => 
-        <div className="comment">
+        <div className="comment" key={comment.id}>
           <span className="user">{comment.user}: </span>
           <span className="comment-message">
             {comment.text}

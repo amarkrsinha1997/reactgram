@@ -32,7 +32,7 @@ Post.propTypes = {
   caption: PropTypes.string.isRequired,
   likes: PropTypes.number.isRequired,
   display_src: PropTypes.string.isRequired,
-  comment: Comments.propTypes.comment
+  comment: Comments.propTypes.comments
 }
 Post.defaultProps = {
   comment: []
