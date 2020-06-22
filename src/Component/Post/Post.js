@@ -11,12 +11,12 @@ const Post = props => {
         <Image imageName={props.display_src} alt={props.display_src} />
       </div>
       <Tabs>
-        <Tabs.Tab>
+        <Tabs.Button>
           Like
-        </Tabs.Tab>
-        <Tabs.Tab>
+        </Tabs.Button>
+        <Tabs.Button>
           Comments
-        </Tabs.Tab>
+        </Tabs.Button>
       </Tabs>
     </div>
   )

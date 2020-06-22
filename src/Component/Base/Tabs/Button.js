@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { colors } from '../../../styles/colors';
 
 const style =  `
@@ -9,14 +10,17 @@ const style =  `
 	text-align: center;
 }
 `
-const Tab = (props) => {
+const Button = (props) => {
 	return (
-		<div className="tab">
+		<div className="tab" role="button" onClick={props.onClick}>
 			{props.children}
 			<style>{style}</style>
 		</div>
 	)
 }
 
-export { Tab }
+Button.propTypes = {
+	onClick: () => {}
+}
+export { Button }
 

@@ -10,6 +10,7 @@ exports[`Tabs renders Tabs properly 1`] = `
     >
       <div
         class="tab"
+        role="button"
       >
         Like 1
         <style>
@@ -29,6 +30,7 @@ exports[`Tabs renders Tabs properly 1`] = `
     >
       <div
         class="tab"
+        role="button"
       >
         Comment 1
         <style>
@@ -57,6 +59,7 @@ exports[`Tabs renders not render unwanted child 1`] = `
     >
       <div
         class="tab"
+        role="button"
       >
         Like 1
         <style>

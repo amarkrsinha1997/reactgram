@@ -1,17 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Tabs } from './Tabs';
-import { Tab } from './Tab';
-describe('Tabs', () => {
 
+describe('Tabs', () => {
 	test('renders Tabs properly', () => {
 		const wrapper = <Tabs>
-			<Tab>
+			<Tabs.Button>
 				Like 1
-			</Tab>
-			<Tab>
+			</Tabs.Button>
+			<Tabs.Button>
 				Comment 1
-			</Tab>
+			</Tabs.Button>
 		</Tabs>
 		const { container } = render(wrapper);
 		expect(container).toMatchSnapshot();
@@ -19,9 +18,9 @@ describe('Tabs', () => {
 
 	test('renders not render unwanted child', () => {
 		const wrapper = <Tabs>
-			<Tab>
+			<Tabs.Button>
 				Like 1
-            </Tab>
+            </Tabs.Button>
 			<div data-testid="unwanted">
 				Comment 1
             </div>

@@ -23,6 +23,7 @@ exports[`Post should render properly 1`] = `
       >
         <div
           class="tab"
+          role="button"
         >
           Like
           <style>
@@ -42,6 +43,7 @@ exports[`Post should render properly 1`] = `
       >
         <div
           class="tab"
+          role="button"
         >
           Comments
           <style>

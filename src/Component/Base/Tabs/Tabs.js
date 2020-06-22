@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Tab } from './Tab';
+import { Button } from './Button';
 import './Tabs.scss'
 
 function Tabs(props) {
@@ -7,7 +7,7 @@ function Tabs(props) {
 		const result = []
 		React.Children.forEach(props.children, child => {
 			const type = child && child.type && (child.type.displayName || child.type.name);
-			if ((Tab.displayName || Tab.name).includes(type)) {
+			if ((Button.displayName || Button.name).includes(type)) {
         result.push(<div className="seperator">{child}</div>)
 			}
 		})
@@ -20,6 +20,6 @@ function Tabs(props) {
 		</div>
 	)
 }
-Tabs.Tab = Tab;
+Tabs.Button = Button;
 export { Tabs }
 
