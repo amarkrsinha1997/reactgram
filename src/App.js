@@ -61,6 +61,7 @@ function App() {
   const [store, dispatch] = useReducer(reducer, initState, (initState) => initState);
   return (
     <div className="App">
+      <h1 className="headline">ReactGram</h1>
       {store.posts.map(post => 
         <Post 
           key={post.code} 

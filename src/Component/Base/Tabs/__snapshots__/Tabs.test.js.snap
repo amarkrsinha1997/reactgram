@@ -8,42 +8,20 @@ exports[`Tabs renders Tabs properly 1`] = `
     <div
       class="seperator"
     >
-      <div
+      <button
         class="tab"
-        role="button"
       >
         Like 1
-        <style>
-          
-.tab {
-	background: #dedede;
-	padding: 10px 20px;
-	color: #333333;
-	text-align: center;
-}
-
-        </style>
-      </div>
+      </button>
     </div>
     <div
       class="seperator"
     >
-      <div
+      <button
         class="tab"
-        role="button"
       >
         Comment 1
-        <style>
-          
-.tab {
-	background: #dedede;
-	padding: 10px 20px;
-	color: #333333;
-	text-align: center;
-}
-
-        </style>
-      </div>
+      </button>
     </div>
   </div>
 </div>
@@ -57,22 +35,11 @@ exports[`Tabs renders not render unwanted child 1`] = `
     <div
       class="seperator"
     >
-      <div
+      <button
         class="tab"
-        role="button"
       >
         Like 1
-        <style>
-          
-.tab {
-	background: #dedede;
-	padding: 10px 20px;
-	color: #333333;
-	text-align: center;
-}
-
-        </style>
-      </div>
+      </button>
     </div>
   </div>
 </div>

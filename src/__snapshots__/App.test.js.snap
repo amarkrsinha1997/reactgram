@@ -5,6 +5,11 @@ exports[`renders learn react link 1`] = `
   <div
     class="App"
   >
+    <h1
+      class="headline"
+    >
+      ReactGram
+    </h1>
     <div
       class="post"
     >
@@ -24,42 +29,20 @@ exports[`renders learn react link 1`] = `
         <div
           class="seperator"
         >
-          <div
+          <button
             class="tab"
-            role="button"
           >
             Like
-            <style>
-              
-.tab {
-	background: #dedede;
-	padding: 10px 20px;
-	color: #333333;
-	text-align: center;
-}
-
-            </style>
-          </div>
+          </button>
         </div>
         <div
           class="seperator"
         >
-          <div
+          <button
             class="tab"
-            role="button"
           >
             Comments
-            <style>
-              
-.tab {
-	background: #dedede;
-	padding: 10px 20px;
-	color: #333333;
-	text-align: center;
-}
-
-            </style>
-          </div>
+          </button>
         </div>
       </div>
     </div>
