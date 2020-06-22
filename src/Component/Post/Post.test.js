@@ -24,6 +24,14 @@ describe('Post', () => {
 		const { container } = render(<Post {...props}/>);
 		expect(container).toMatchSnapshot();
 	});
-	test.todo('should show number comments in a post')
-	test.todo('should not show number comments in a post when no comments are there.')
+	test('should show number comments in a post', () => {
+		const { queryByText } = render(<Post {...props} />);
+		queryByText(/(1)/)
+		expect(queryByText(/(1)/)).not.toBeNull();
+	})
+	test('should not show number comments in a post when no comments are there.', () => {
+		const { queryByText } = render(<Post {...props} comment={[]}/>);
+		queryByText(/(1)/)
+		expect(queryByText(/(1)/)).toBeNull();
+	})
 });

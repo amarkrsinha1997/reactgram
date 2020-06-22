@@ -18,7 +18,7 @@ const Post = props => {
           Like
         </Tabs.Button>
         <Tabs.Button onClick={toggleComment}>
-          Comments
+          Comments {props.comment.length !== 0 && `(${props.comment.length})`}
         </Tabs.Button>
       </Tabs>
       {shouldShowComments && <Comments comments={props.comment} code={props.code} />}
@@ -38,4 +38,3 @@ Post.defaultProps = {
   comment: []
 }
 export { Post }
-//{props.comment.length !== 0 && `(${props.comment.length})`}

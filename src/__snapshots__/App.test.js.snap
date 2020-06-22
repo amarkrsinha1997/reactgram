@@ -41,7 +41,8 @@ exports[`App renders learn react link 1`] = `
           <button
             class="tab"
           >
-            Comments
+            Comments 
+            (1)
           </button>
         </div>
       </div>
