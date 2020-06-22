@@ -4,9 +4,9 @@
 	width: 100%;
 }
 .seperator {
-	border-right: 1px solid #999;
 	flex: 1;
+	margin-right: 2px;
 	&:last-child {
-		border-right: none;
+		margin-right: none;
 	}
 }

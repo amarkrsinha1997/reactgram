@@ -1,25 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { colors } from '../../../styles/colors';
+import './Button.scss';
 
-const style =  `
-.tab {
-	background: ${colors.grey.shade1};
-	padding: 10px 20px;
-	color: ${colors.black.shade1};
-	text-align: center;
-}
-`
 const Button = (props) => {
 	return (
-		<div className="tab" role="button" onClick={props.onClick}>
+		<button className="tab" onClick={props.onClick}>
 			{props.children}
-			<style>{style}</style>
-		</div>
+		</button>
 	)
 }
 
 Button.propTypes = {
+	onClick: PropTypes.func
+}
+Button.defaultProps = {
 	onClick: () => {}
 }
 export { Button }
