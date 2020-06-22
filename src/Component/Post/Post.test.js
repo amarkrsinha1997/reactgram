@@ -1,6 +1,6 @@
 import React from "react";
 import { Post } from './Post';
-import { render } from "@testing-library/react";
+import { render, fireEvent  } from "@testing-library/react";
 
 describe('Post', () => {
 	let props;
@@ -24,7 +24,15 @@ describe('Post', () => {
 		const { container } = render(<Post {...props}/>);
 		expect(container).toMatchSnapshot();
 	});
+	test('should be able to see comment on the post when clicked on comment tab', () => {
+    const { queryByTestId, queryByText } = render(<Post {...props} />);
+    const commentElements = queryByTestId(/_A2r0aQcfD/)
+    expect(commentElements).toBeNull()
+    
+    const commentTabElement = queryByText(/Comments/)
+    fireEvent.click(commentTabElement)
+    expect(queryByTestId(/_A2r0aQcfD/)).toBeInTheDocument()
+	})
 	test.todo('should be able to like the post')
-	test.todo('should be able to see comment on the post when clicked on comment tab')
 	test.todo('should be able to comment on the post')
 });
