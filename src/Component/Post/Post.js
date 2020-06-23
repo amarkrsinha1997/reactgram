@@ -5,6 +5,8 @@ import { Tabs } from "../Base/Tabs/Tabs"
 import './Post.scss';
 import Comments from '../Comments/Comments';
 
+// TODO: Add input box add comments.
+
 const Post = props => {
   const [shouldShowComments, setShouldShowComments] = useState(false);
   const toggleComment = () => setShouldShowComments((prevState) => !prevState);
@@ -32,7 +34,8 @@ Post.propTypes = {
   caption: PropTypes.string.isRequired,
   likes: PropTypes.number.isRequired,
   display_src: PropTypes.string.isRequired,
-  comment: Comments.propTypes.comments
+  comment: Comments.propTypes.comments,
+  dispatch: PropTypes.func.isRequired
 }
 Post.defaultProps = {
   comment: []
