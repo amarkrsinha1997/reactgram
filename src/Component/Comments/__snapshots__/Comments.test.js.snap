@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments should render properly 1`] = `
+<div>
+  <div
+    class="comments"
+    data-testid="AXU_Y21A_T"
+  >
+    <div
+      class="comment"
+    >
+      <span
+        class="user"
+      >
+        Amar
+        : 
+      </span>
+      <span
+        class="comment-message"
+      >
+        nice dp!
+      </span>
+      <img
+        alt="edit-icon"
+        class="icon"
+        src="editIcon.svg"
+      />
+    </div>
+    <div
+      class="comment"
+    >
+      <span
+        class="user"
+      >
+        Depak
+        : 
+      </span>
+      <span
+        class="comment-message"
+      >
+        Cool!
+      </span>
+      <img
+        alt="edit-icon"
+        class="icon"
+        src="editIcon.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
