@@ -3,3 +3,5 @@ fileignoreconfig:
   checksum: 83a3a00f7fb8374aceffcbfbc3b7d3b0fcf2871abb0cbeda61e3f7245899c798
 - filename: yarn.lock
   checksum: 8babb85731a4bc8fe9d7ba91ee0469340878d0b8abb484a76fa818e85afa26ce
+- filename: src/Model/PostModel.test.js
+  checksum: b87486ca20cbd0b19c9d6d5b2caccf91919047b854cefe6c4c0190cf34b6f877

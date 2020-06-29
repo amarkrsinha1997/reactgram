@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostModel should throw error when comment is not found 1`] = `"No comment for the Id: 1223 and postId: 1135147611821557699"`;
+
+exports[`PostModel should throw error when post is not found 1`] = `"No post found for Id: 44343232232321"`;
+
+exports[`PostModel should validate comment when added as yours 1`] = `"No \`comment.text\` found in {\\"texts\\":\\"Uhu!\\"}"`;
+
+exports[`PostModel should validate comment when edited. 1`] = `"Comment can't be empty."`;
