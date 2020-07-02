@@ -17,7 +17,8 @@ describe('Post', () => {
 					"user": "lucascaixeta",
 					"id": 1
 				}
-			]
+			],
+			dispatch: jest.fn()
 		};
 	})
 	test('should render properly', () => {

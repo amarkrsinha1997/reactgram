@@ -9,12 +9,29 @@
   color: #333333;
   margin: 2.5px 0;
   border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-message {
+  align-self: flex-start;
+  flex: 1;
 }
 
 .user {
   font-weight: 700;
+  margin-right: 5px;
 }
 
 .icon {
-  float: right;
+  align-self: flex-end;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.input-box {
+  border: none;
+  padding: 5px;
+  flex: 1;
+  border-radius: 3px;
 }

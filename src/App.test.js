@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, act, waitForElementToBeRemoved } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import App from './App';
 
 jest.mock('./data/posts', () => {
-  return [	{
+  return [{
 		"code": "_A2r0aQcfD",
 		"caption": "Some serious hardware meet JavaScript hacks going down this week at hackeryou. Excited for demo day!",
 		"likes": 57,
@@ -35,4 +36,18 @@ describe('App', () => {
 	})
 	test.todo('should be able to like the post')
 	test.todo('should be able to comment on the post')
+	test('should be able to edit comments on the posts', async () => {
+		const wrapper = render(<App />);
+	
+		fireEvent.click(wrapper.getByText(/Comments/));
+		expect(wrapper.getByText(/Uhu!/)).toBeInTheDocument();
+		
+		fireEvent.click(wrapper.getByAltText(/edit-icon/));
+		userEvent.type(wrapper.getByTestId(/edit-input/), 'Hello');
+		fireEvent.keyDown(wrapper.getByTestId(/edit-input/), { key: 'Enter' });
+		await waitForElementToBeRemoved(() => wrapper.getByTestId(/edit-input/));
+
+		expect(wrapper.queryByText(/Hello/)).toBeInTheDocument();
+		expect(wrapper.queryByText(/Uhu!/)).not.toBeInTheDocument();
+	})
 });

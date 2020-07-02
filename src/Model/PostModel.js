@@ -74,18 +74,18 @@ PostModel.executeFor = (posts, postId, cb) => {
   const [post, postIndex] = PostModel.findPost(posts, postId);
   cb(post);
   _posts[postIndex] = post;
-  // return _posts;
+  return _posts;
 }
 PostModel.addComment = (posts, postId, comment) => {
-  PostModel.executeFor(posts, postId, (post) => post.addComment(comment));
+  return PostModel.executeFor(posts, postId, (post) => post.addComment(comment));
 }
 
 PostModel.removeComment = (posts, postId, commentId) => {
-  PostModel.executeFor(posts, postId, (post) => post.deleteComment(commentId));
+  return PostModel.executeFor(posts, postId, (post) => post.deleteComment(commentId));
 }
 
 PostModel.updateComment = (posts, postId, commentId, commentMessage) => {
-  PostModel.executeFor(posts, postId, (post) => post.updateComment(commentId, commentMessage));
+  return PostModel.executeFor(posts, postId, (post) => post.updateComment(commentId, commentMessage));
 }
 
 export {PostModel}
