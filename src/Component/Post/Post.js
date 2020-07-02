@@ -4,7 +4,6 @@ import { Image } from '../Base/Image/Image'
 import { Tabs } from "../Base/Tabs/Tabs"
 import './Post.scss';
 import Comments from '../Comments/Comments';
-import { actionTypes } from '../../reducer';
 
 // TODO: Add input box add comments.
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, act, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, fireEvent, waitForElementToBeRemoved } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 
