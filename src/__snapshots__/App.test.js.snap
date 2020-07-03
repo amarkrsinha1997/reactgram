@@ -32,7 +32,9 @@ exports[`App renders learn react link 1`] = `
           <button
             class="tab"
           >
-            Like
+            Like (
+            57
+            )
           </button>
         </div>
         <div

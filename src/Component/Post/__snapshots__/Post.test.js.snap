@@ -24,7 +24,9 @@ exports[`Post should render properly 1`] = `
         <button
           class="tab"
         >
-          Like
+          Like (
+          57
+          )
         </button>
       </div>
       <div

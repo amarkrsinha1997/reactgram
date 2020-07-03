@@ -18,6 +18,7 @@ function PostModel(post) {
       ]
     }
    */
+  let liked = false;
   let _post = post;
   const validateCommentOrThrow = (comment) => {
     if(typeof comment === 'object' && !comment.text) {
@@ -57,9 +58,16 @@ function PostModel(post) {
     
     return [_post.comment[commentIndex], commentIndex];
   }
+  this.like = () => { 
+    !liked? _post.likes++ : _post.likes--; 
+    liked = !liked;
+  };
   this.comment = () => _post.comment || [];
   this.post = () => _post;
   this.id = () => _post.id;
+}
+PostModel.like = (posts, postId) => {
+  return PostModel.executeFor(posts, postId, post => post.like())
 }
 PostModel.count = 1
 PostModel.findPost = (posts, id) => {

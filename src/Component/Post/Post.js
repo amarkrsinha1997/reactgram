@@ -4,20 +4,29 @@ import { Image } from '../Base/Image/Image'
 import { Tabs } from "../Base/Tabs/Tabs"
 import './Post.scss';
 import Comments from '../Comments/Comments';
+import { actionTypes } from '../../reducer';
 
 // TODO: Add input box add comments.
 
 const Post = props => {
   const [shouldShowComments, setShouldShowComments] = useState(false);
   const toggleComment = () => setShouldShowComments((prevState) => !prevState);
+  const handleLikeClick = () => {
+    props.dispatch({
+      type: actionTypes.LIKE_COMMENT,
+      payload: {
+        postId: props.id
+      }
+    })
+  }
   return (
     <div className="post">
       <div className="post-image">
         <Image imageName={props.display_src} alt={props.display_src} />
       </div>
       <Tabs>
-        <Tabs.Button>
-          Like
+        <Tabs.Button onClick={handleLikeClick} data-testid={props.code+props.id}>
+          Like ({props.likes})
         </Tabs.Button>
         <Tabs.Button onClick={toggleComment}>
           Comments {props.comment.length !== 0 && `(${props.comment.length})`}

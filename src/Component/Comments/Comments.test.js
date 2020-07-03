@@ -49,5 +49,9 @@ describe('Comments', () => {
 			payload: { postId: props.postId, commentId: props.id, comment: 'Hello' }
 		})
 	})
-
+	test('should focus on input when edit-icon clicked', () => {
+		const wrapper = render(<Comments {...props} comments={[{ user: 'Amar', text: 'nice dp!' }]} />);
+		fireEvent.click(wrapper.getByAltText(/edit-icon/));
+		expect(wrapper.getByTestId(/edit-input/)).toHaveFocus();
+	})
 });

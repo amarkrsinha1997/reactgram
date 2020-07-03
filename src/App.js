@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import './App.scss';
-import posts from './data/posts';
+import { posts } from './data/posts';
 import { Post } from './Component/Post/Post';
 import { PostModel } from './Model/PostModel';
 import { reducer } from './reducer';
@@ -9,7 +9,7 @@ import { reducer } from './reducer';
 // const clone = (obj) => JSON.parse(JSON.stringify(obj));
 
 const initState = {
-  posts
+  posts: posts()
 };
 
 function App() {

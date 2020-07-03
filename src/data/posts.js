@@ -1,4 +1,4 @@
-export default [
+export const posts = () =>  ([
 	{
 		"code": "BAcyDyQwcXX",
 		"caption": "Lunch #hamont",
@@ -372,4 +372,4 @@ export default [
 		"id": "1118481761857291950",
 		"display_src": "11326072_550275398458202_1726754023_n.jpg"
 	}
-]
+])

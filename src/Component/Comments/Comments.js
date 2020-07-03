@@ -11,8 +11,12 @@ const Comment = (props) => {
   const { comment, handleChange } = props;
   const [commentInput, setCommentInput] = useState(comment.text);
   const [editable, setEditable] = useState(false);
-
-  const handleIconClick = () => setEditable((prevEditable) => !prevEditable);
+  const handleEditClose = e => {
+    setEditable(false);
+  }
+  const handleEdit = (e) => {
+    setEditable(true);
+  };
 
   const handleCommentEdit = async (event) => {
     const { value: updatedCommentMessage } = event.target;
@@ -22,10 +26,10 @@ const Comment = (props) => {
   const handleSubmit = async event => {
     if(event.key === 'Enter') {
       await handleChange(comment.id, commentInput);
-      handleIconClick();
+      handleEditClose();
     }
   }
-  
+
   return (
     <React.Fragment>
       <div className="comment">
@@ -38,6 +42,7 @@ const Comment = (props) => {
             <input 
               data-testid="edit-input"
               type="text" 
+              autoFocus={true}
               onChange={handleCommentEdit}
               onKeyDown={handleSubmit} 
               name="edit-comment" 
@@ -51,12 +56,12 @@ const Comment = (props) => {
               src={editIcon}
               alt="edit-icon"
               className="icon"
-              onClick={handleIconClick} /> :
+              onClick={handleEdit} /> :
             <img
               src={cancelIcon}
               alt="cancel-edit-icon"
               className="icon"
-              onClick={handleIconClick} />
+              onClick={handleEditClose} />
         }
       </div>
     </React.Fragment>
